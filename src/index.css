@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* CSS DESIGN USING MOBILE-FIRST APPROACH */
+:root {
+  /* Typography */
+  --FF: "Space Mono", monospace;
+  --FW: 700;
+  --FS: 1rem;
+  /* Colors */
+  /* Primary-Colors */
+  --Green-400:hsl(172, 67%, 45%);
+   /* Neutral-Colors */
+   --Green-900: hsl(183, 100%, 15%);
+   --Grey-500: hsl(186, 14%, 43%);
+   --Grey-400: hsl(184, 14%, 56%);
+   --Grey-200: hsl(185, 41%, 84%);
+   --Grey-50: hsl(189, 47%, 97%);
+   --White: hsl(0, 100%, 100%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-optical-sizing: auto;
+  font-family: var(--FF);
+  font-size: var(--FS);
+  background-color: var(--Grey-200);
+  color: var(--Grey-400);
+  font-weight: var(--FW);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Typography */
+.tip-text {
+  margin-bottom: 0.8em;
+}
+
+.amt-text{
+  color: var(--White);
+}
+
+.amt-text span{
+  color: var(--Grey-400);
+  display: block;
+  font-size: 0.8rem;
+}
+
+.output-amt {
+  color: var(--Green-400);
+  margin-left: 4em;
+}
+/* Content styles */
+.container{
+  padding: 2em 0;
+}
+
+.logo {
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.content-wrapper {
+  border-radius: 15px;
+  background-color: var(--White) ;
+  padding: 1em 0.5em;
+  margin: 0 auto;
+  border: none;
+  width: 100%;
+}
+
+.input-wrapper {
+  color: var(--Green-900);
+  padding: 0.6em;
+  border-radius: 8px;
+  background-color: var(--Grey-50);
+  font-weight: inherit;
+  border: none;
+  text-align: right;
+  display: block;
+  width: 100%;
+}
+
+.input-wrapper:hover,
+.input-wrapper:focus {
+  cursor: pointer;
+  border: solid var(--Green-400);
+}
+
+.form-wrapper {
+  position: relative;
+}
+
+.dollar-icon {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  left: 0;
+  margin-left: 0.5em;
+}
+
+.custom-input {
+  color: var(--Grey-500);
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  background-color: var(--Grey-50);
+  font-weight: inherit;
+  border: none;
+  text-align: center;
+  width: 70%;
+}
+
+.custom-input:hover,
+.custom-input:focus {
+  cursor: pointer;
+  border: solid var(--Green-400);
+}
+
+.percentage-btn {
+  font-weight: inherit;
+  padding: 0.6em 3em;
+  color: var(--Grey-50);
+  background-color: var(--Green-900);
+  border-radius: 5px;
+  border: none;
+}
+
+.percentage-btn:hover {
+  cursor: pointer;
+  background-color: var(--Green-400);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.grid-container {
+display: grid;
+grid-template-columns: repeat(2, 50%);
+grid-row-gap: 5px;
+grid-column-gap: 6px;
+}
+
+.form-people {
+  margin-top: 0.8em;
+}
+
+.output-wrapper {
+  border-radius: 15px;
+  background-color: var(--Green-900) ;
+  padding: 0.9em 0;
+  border: none;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.output-content {
+  display: flex;
+  justify-content: center;
+}
+
+.reset-btn {
+  font-weight: inherit;
+  padding: 0.6em 5em;
+  color: var(--Green-900);
+  background-color: var(--Grey-200);
+  border-radius: 5px;
+  border: none;
+  margin-top: 5em;
+}
+
+.reset-btn:hover {
+  cursor: pointer;
+  background-color: var(--Green-400);
+}
+/* Tablet Styles */
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    width: 80%;
+  }
+
+  .custom-input {
+    width: 100%;
+    padding: 0.9em;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 20%);
+    grid-row-gap: 5px;
+    grid-column-gap: 60px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .content-wrapper {
+    width: 50%;
+    display: flex;
+  }
+
+  .percentage-btn {
+    padding: 0.6em 2em;
+  }
+
+  .output-wrapper {
+    width: 40%;
+    padding: 0.6em 0;
+    text-align: center;
+  }
+
+  .input-wrapper {
+    width: 50%;
+    margin: 0;
+  }
+  .custom-input {
+    width: 95%;
+    padding: 0.5em 0.7em;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 20%);
+    grid-row-gap: 8px;
+    grid-column-gap: 10px;
+    }
+
+}
