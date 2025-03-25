@@ -23,8 +23,6 @@ Now about this README, I wrote everything starting from tools that I used, usefu
 
 This project is solely for learning purposes. I take no any responsibility or liability for the accuracy, completeness, or usefulness of any information provided in this project. You should not use it as a reference for creating your project.
 
-The challenge
-
 ### The challenge
 
 Users should be able to:
@@ -39,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/JudithJude369/Tip-Calculator)
-- Live Site URL:(https://tip-calculator-flax-nine.vercel.app/)
+- [Solution URL](https://github.com/JudithJude369/Tip-Calculator)
+- [Live Site URL](https://tip-calculator-flax-nine.vercel.app/)
 
 ## My process
 
@@ -56,11 +54,11 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - (https://www.frontendmentor.io/profile/JudithJude369)
-- Twitter - (https://x.com/JudithJ08832378)
+- Frontend Mentor [JudithJude](https://www.frontendmentor.io/profile/JudithJude369)
+- Twitter [Judith](https://x.com/JudithJ08832378)
 
 ## Acknowledgments
 
 Omololu Jumat really helped me in this project. Thank you very much, Lolu and I'm very grateful!
 
-See his Portfolio website — (https://omololujumat.netlify.app/)
+See his Portfolio website [Omololu](https://omololujumat.netlify.app/)
