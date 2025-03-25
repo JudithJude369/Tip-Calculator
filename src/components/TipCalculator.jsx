@@ -9,8 +9,8 @@ const TipCalculator = () => {
   const [bill, setBill] = useState('')
   const [people, setPeople] = useState('')
   const [tip, setTip] = useState('')
-  const [tipAmount, setTipAmount] = useState(0.00)
-  const [tipTotal, setTipTotal] = useState(0.00)
+  const [billError, setBillError] = useState('')
+  const [peopleError, setPeopleError] = useState('')
 
   function calculateTipAmount() {
     let tipAmount = 0.00;
@@ -31,40 +31,62 @@ const TipCalculator = () => {
    return totalAmount;
   }
 
+  function handleReset() {
+    setBill('')
+    setPeople('')
+    setTip('')
+    setBillError('')
+    setPeopleError('')
+  }
+
+
   function handleBill(event) {
-    setBill(parseInt(event.target.value))
+    const billValue = parseInt(event.target.value) 
+    setBill(billValue)
+    if(billValue <= 0) {
+      setBillError("Can't be zero") 
+    } else {
+      setBillError('')
+    }
   }
 
   function handlePeople(event) {
-    setPeople(parseInt(event.target.value))
+   const peopleValue = parseInt(event.target.value) 
+   setPeople(peopleValue)
+    if(peopleValue <= 0) {
+      setPeopleError("Can't be zero") 
+    } else {
+      setPeopleError('')
+    }
   }
 
   function handleSubmit(event) {
     event.preventDefault()
   }
+  const tipAmt = calculateTipAmount()
+  const totalAmt = calculateTotalAmount()
   return (
     <div className='content-wrapper'>
       <div>
       <form className='form-wrapper' onSubmit={handleSubmit}>
-      <label>Bill</label>
+      <label>Bill  {billError && <span className='error'>{billError}</span>}</label>
         <input type="number"  className="input-wrapper" value={bill} onChange={handleBill} min={0}/>
         <img src={dollarIcon} alt="" className='dollar-icon'/>
       </form>
       <TipButton
-      setTipAmount={()=>calculateTipAmount()}
-      setTipTotal={()=>calculateTotalAmount()}
         tip={tip} 
         setTip={setTip}
         />
       <form className='form-wrapper form-people' onSubmit={handleSubmit}>
-      <label> Number of People</label>
+      <label> Number of People {peopleError && <span className='error'>{peopleError}</span>} </label>
         <input type="number"  className="input-wrapper" value={people} onChange={handlePeople} min={0}/>
         <img src={personIcon} alt="" className='dollar-icon'/>
       </form>
       </div>
       <TipOutput 
-      tipAmount={tipAmount}
-      tipTotal={tipTotal} 
+      tipAmt={tipAmt}
+      totalAmt={totalAmt}
+      handleReset={handleReset}
       />
     </div>
   )

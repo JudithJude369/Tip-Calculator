@@ -177,6 +177,12 @@ textarea:not([rows]) {
   position: relative;
 }
 
+.error {
+  color: red;
+ margin-left: 6em;
+  font-size: 0.7rem;
+}
+
 .dollar-icon {
   position: absolute;
   top: 60%;
